@@ -46,6 +46,7 @@ export default function Layout({children}){
                     </div>
                 </Link>
                 <ul style={{listStyle: `none`, float: `right`}}>
+                    <NavLink to='/'>Home</NavLink>
                     <NavLink to='/about'>About</NavLink>
                 </ul>
             </header>

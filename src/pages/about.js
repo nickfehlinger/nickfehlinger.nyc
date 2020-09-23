@@ -1,11 +1,36 @@
 import React from "react"
+import Container from "../components/container"
 
 import Layout from "../components/layout"
 
 
 
-export default function About() {
-  return <Layout>
-            <p>This is the about page</p>
-        </Layout>
+export default function About({data}) {
+    let pageData = data.allKontentItemPage.edges[0].node.elements;
+    return <Layout>
+              <Container pageName={pageData.page_name.value} pageDescription={pageData.page_description.value}></Container>
+           </Layout>
 }
+
+
+export const query = graphql`
+{
+  allKontentItemPage(filter: {system: {codename: {eq: "about_page"}}}) {
+    edges {
+      node {
+        id
+        elements {
+          page_name {
+            name
+            value
+          }
+          page_description {
+            name
+            value
+          }
+        }
+      }
+    }
+  }
+}
+`
