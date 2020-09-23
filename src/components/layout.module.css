@@ -1,0 +1,13 @@
+.layout{
+    margin: 50px auto;
+    max-width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.siteTitle{
+    display: inline-block;
+    color: #444;
+}
+.navLink{
+    color: #448;
+    text-decoration: none;
+}

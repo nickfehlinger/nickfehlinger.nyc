@@ -1,33 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
 
 
 
-export default function Home({ data }) {
-  return <div>
-           <h1>{data.allKontentItemHeading.edges[0].node.elements.title.value}</h1>
-           <h2>{data.allKontentItemHeading.edges[0].node.elements.subtitle.value}</h2>
-         </div>
+export default function Home() {
+  return <Layout>
+            <p>This is the home page</p>
+         </Layout>
 }
-
-export const query = graphql`
-query MyQuery {
-  allKontentItemHeading {
-    edges {
-      node {
-        id
-        elements {
-          subtitle {
-            name
-            value
-          }
-          title {
-            name
-            value
-          }
-        }
-      }
-    }
-  }
-}
-`
