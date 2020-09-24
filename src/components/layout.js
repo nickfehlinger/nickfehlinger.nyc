@@ -16,14 +16,11 @@ export default function Layout({children}){
             allKontentItemHeading {
               edges {
                 node {
-                  id
                   elements {
-                    subtitle {
-                      name
+                    title {
                       value
                     }
-                    title {
-                      name
+                    subtitle {
                       value
                     }
                   }
