@@ -62,7 +62,8 @@ export default function Layout({children}){
                 </Link>
                 <ul style={{listStyle: `none`, float: `right`}}>
                     {NavValues.map((navLink) => {
-                        return <NavLink to={navLink.node.fields.slug}>{navLink.node.elements.page_name.value}</NavLink>
+                        let link = `/${navLink.node.fields.slug}`
+                        return <NavLink to={link}>{navLink.node.elements.page_name.value}</NavLink>
                     }
                     )}
                 </ul>
