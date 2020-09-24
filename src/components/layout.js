@@ -30,11 +30,26 @@ export default function Layout({children}){
                 }
               }
             }
+            allKontentItemPage {
+                edges {
+                    node {
+                        elements {
+                            page_name {
+                                value
+                            }
+                        }
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
           }
         `
     )
 
-    let TitleData = data.allKontentItemHeading.edges[0].node.elements;
+    let TitleData = data.allKontentItemHeading.edges[0].node.elements,
+        NavValues = data.allKontentItemPage.edges;
 
     return (
         <div className={layoutStyles.layout}>
@@ -46,8 +61,10 @@ export default function Layout({children}){
                     </div>
                 </Link>
                 <ul style={{listStyle: `none`, float: `right`}}>
-                    <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/about'>About</NavLink>
+                    {NavValues.map((navLink) => {
+                        return <NavLink to={navLink.node.fields.slug}>{navLink.node.elements.page_name.value}</NavLink>
+                    }
+                    )}
                 </ul>
             </header>
             {children}
