@@ -16,6 +16,7 @@
   "dependencies": {
     "@kentico/gatsby-source-kontent": "^6.0.1",
     "gatsby": "^2.24.63",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-source-filesystem": "^2.3.30",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
