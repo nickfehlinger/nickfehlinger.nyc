@@ -12,7 +12,7 @@ export default function SideNav(){
     let data = useStaticQuery(
         graphql`
         {
-            allKontentItemPage {
+            allKontentItemPage(sort: {order: ASC, fields: elements___nav_order___value}) {
               edges {
                 node {
                   id

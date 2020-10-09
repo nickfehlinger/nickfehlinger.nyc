@@ -1,4 +1,21 @@
 .navList{
-    flex-grow: 1;
     border-right: 1px solid #666;
+    list-style: none;
+    padding: 10px;
+    min-width: 150px;
+}
+.navItem{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #fff;
+}
+.navItem:hover{
+    background-color: #666;
+}
+.navItem a{
+    color: #666;
+}
+.navItem:hover a{
+    color: #fff;
 }

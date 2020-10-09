@@ -6,5 +6,5 @@
 }
 .children{
     display: inline;
-    flex-grow: 8;
+    flex-grow: 1;
 }

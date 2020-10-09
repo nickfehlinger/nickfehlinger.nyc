@@ -26,7 +26,7 @@ export default function Heading() {
     let headingData = data.allKontentItemHeading.edges[0].node.elements;
     return(
         <div className={headingStyles.heading}>
-            <Link>
+            <Link to='/'>
                 <h1>{headingData.title.value}</h1>
                 <h2>{headingData.subtitle.value}</h2>
             </Link>
