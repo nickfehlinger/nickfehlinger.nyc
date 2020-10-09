@@ -1,4 +1,9 @@
 html{
-    background-image: linear-gradient(180deg, #66c, #ccf);
+    background-color: #fff;
     height: 100%;
+    font-family: 'Red Hat Text';
+}
+
+h1, h2, h3, h4{
+    font-family: 'Red Hat Display';
 }
