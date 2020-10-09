@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 
 
 export default function About({data}) {
-    console.log(data)
     let pageData = data.allKontentItemPage.edges[0].node.elements;
     return <Layout>
               <Container pageName={pageData.page_name.value} pageDescription={pageData.page_description.value}></Container>

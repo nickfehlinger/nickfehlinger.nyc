@@ -1,13 +1,15 @@
-.layout{
+.container{
     margin: 50px auto;
-    max-width: 1000px;
+    width: 75%;
+    min-width: 1000px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.siteTitle{
+/* .sideNav{
     display: inline-block;
-    color: #fff;
-}
-.navLink{
-    color: #fff;
-    text-decoration: none;
+    width: 33%;
+    min-width: 300px;
+} */
+.children{
+    display: inline-block;
+    width: 74%;
 }
