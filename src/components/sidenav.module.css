@@ -1,6 +1,4 @@
 .navList{
-    display: inline-block;
-    width: 25%;
-    min-width: 300px;
+    flex-grow: 1;
     border-right: 1px solid #666;
 }
