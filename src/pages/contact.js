@@ -9,7 +9,7 @@ export default function Contact (){
 				<p>Feel free to drop me a line! I can't wait to hear from you!</p>
 			</div>
 			<div className="contact">
-				<form name="contact" method="POST" data-netlify="true">
+				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
 					<p>
 						<label>Name: </label><input type="text" name="Name" />
 					</p>
