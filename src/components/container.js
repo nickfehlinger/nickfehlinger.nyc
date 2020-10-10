@@ -1,5 +1,6 @@
 import React from "react"
 import containerStyles from "./container.module.css"
+import Testimonial from './testimonial'
 
 export default function Container(props){
     return <div className={containerStyles.container}>
@@ -13,5 +14,8 @@ export default function Container(props){
                 </a>
             ) : null}
             <p dangerouslySetInnerHTML={{__html: props.pageDescription}}></p>
+            {props.slug === 'testimonials' ? (
+                <Testimonial></Testimonial>
+            ) : null}
            </div>
 }
