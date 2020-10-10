@@ -29,7 +29,8 @@ export default function Contact (){
 					</p>
 					<p className="submit"><button type="submit">Send</button></p>
 				</form> */}
-				<form name="contact" form-name="contact" method="POST" data-netlify="true" action="/thankyou">
+				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
+					<input type="hidden" name="form-name" value="contact" />
 					<p>
 						<label>Your Name: <input type="text" name="name" /></label>   
 					</p>
