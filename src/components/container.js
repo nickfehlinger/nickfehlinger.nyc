@@ -14,7 +14,7 @@ export default function Container(props){
                     <button>Download {props.downloadable[0]}</button>
                 </a>
             ) : null}
-            <p dangerouslySetInnerHTML={{__html: props.pageDescription}}></p>
+            <div dangerouslySetInnerHTML={{__html: props.pageDescription}}></div>
             {props.slug === 'testimonials' ? (
                 <Testimonial></Testimonial>
             ) : null}
