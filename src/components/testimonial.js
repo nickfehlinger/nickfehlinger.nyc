@@ -1,6 +1,6 @@
 import React from "react"
 import testimonialStyles from "./testimonial.module.css"
-import { useStaticQuery, qraphql, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Testimonials = props => (
 	<li className={testimonialStyles.testimonial}>
