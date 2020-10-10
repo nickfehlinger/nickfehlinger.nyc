@@ -29,7 +29,7 @@ export default function Contact (){
 					</p>
 					<p className="submit"><button type="submit">Send</button></p>
 				</form> */}
-				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
+				<form name="contact" form-name="contact" method="POST" data-netlify="true" action="/thankyou">
 					<p>
 						<label>Your Name: <input type="text" name="name" /></label>   
 					</p>
