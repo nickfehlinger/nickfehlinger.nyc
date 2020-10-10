@@ -9,12 +9,12 @@ export default function Container(props){
             {props.heroImage ? (
                 <div className={containerStyles.heroImg} style={{backgroundImage:`url(${props.heroImage})`}}></div>
             ) : null}
+            <div dangerouslySetInnerHTML={{__html: props.pageDescription}}></div>
             {props.downloadable ? (
                 <a href={props.downloadable[1]} target='_blank'>
                     <button>Download {props.downloadable[0]}</button>
                 </a>
             ) : null}
-            <div dangerouslySetInnerHTML={{__html: props.pageDescription}}></div>
             {props.slug === 'testimonials' ? (
                 <Testimonial></Testimonial>
             ) : null}
