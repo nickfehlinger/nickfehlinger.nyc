@@ -9,7 +9,8 @@ export default function Contact (){
 				<p>Feel free to drop me a line! I can't wait to hear from you!</p>
 			</div>
 			<div className="contact">
-				{/* <form name="contact" method="POST" data-netlify="true" action="/thankyou">
+				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
+					<input type="hidden" name="form-name" value="contact" />
 					<p>
 						<label for="Name">Name: </label><input type="text" name="Name" />
 					</p>
@@ -28,27 +29,6 @@ export default function Contact (){
 						<label for="Message">Message: </label><textarea name="Message"></textarea>
 					</p>
 					<p className="submit"><button type="submit">Send</button></p>
-				</form> */}
-				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
-					<input type="hidden" name="form-name" value="contact" />
-					<p>
-						<label>Your Name: <input type="text" name="name" /></label>   
-					</p>
-					<p>
-						<label>Your Email: <input type="email" name="email" /></label>
-					</p>
-					<p>
-						<label>Your Role: <select name="role[]" multiple>
-						<option value="leader">Leader</option>
-						<option value="follower">Follower</option>
-						</select></label>
-					</p>
-					<p>
-						<label>Message: <textarea name="message"></textarea></label>
-					</p>
-					<p>
-						<button type="submit">Send</button>
-					</p>
 				</form>
 			</div>
 		</Layout>
