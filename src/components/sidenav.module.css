@@ -9,6 +9,7 @@
     border-radius: 5px;
     width: 100px;
     background-color: #fff;
+    cursor: pointer;
 }
 .navItem:hover{
     background-color: #666;
@@ -18,4 +19,8 @@
 }
 .navItem:hover a{
     color: #fff;
+}
+.navLink{
+    width: 100%;
+    display: block;
 }

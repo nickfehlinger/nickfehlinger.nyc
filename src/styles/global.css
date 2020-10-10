@@ -20,3 +20,42 @@ a:visited{
 a:hover{
     color: #333;
 }
+.contactTitle{
+    text-align: center;
+}
+.contact{
+    margin: 30px auto;
+    display: block;
+    width: 650px;
+}
+.contact input, .contact select, .contact textarea{
+    width: 415px;
+    padding: 5px;
+    box-sizing: content-box;
+    font-family: 'Red Hat Text';
+    color: #333;
+}
+.contact label{
+    margin: 5px 10px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contact textarea{
+    height: 200px;
+}
+.contact .submit{
+    text-align: right;
+}
+.contact button{
+    background-color: #fff;
+    color: #333;
+    font-family: 'Red Hat Text';
+    padding: 5px;
+    width: 80px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.contact button:hover{
+    background-color: #ddd;
+}

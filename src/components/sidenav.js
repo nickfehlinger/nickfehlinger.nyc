@@ -41,6 +41,7 @@ export default function SideNav(){
 
                 return <NavLink to={link}>{value}</NavLink>
             })}
+            <NavLink to="/contact">Contact</NavLink>
         </ul>
     )
 
