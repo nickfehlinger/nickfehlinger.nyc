@@ -11,13 +11,13 @@ export default function Contact (){
 			<div className="contact">
 				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
 					<p>
-						<label>Name: </label><input type="text" name="Name" />
+						<label for="Name">Name: </label><input type="text" name="Name" />
 					</p>
 					<p>
-						<label>Email: </label><input type="Email" name="Email" />
+						<label for="Email">Email: </label><input type="Email" name="Email" />
 					</p>
 					<p>
-						<label>Reason For Contact: </label><select name="reason[]" multiple>
+						<label for="Reason[]">Reason For Contact: </label><select name="Reason[]" multiple>
 							<option value="Hire-FT">Hiring (Full Time)</option>
 							<option value="Hire-Freelance">Hiring (Freelance)</option>
 							<option value="General">General Inquiry</option>
@@ -25,7 +25,7 @@ export default function Contact (){
 						</select>
 					</p>
 					<p>
-						<label>Message: </label><textarea name="Message"></textarea>
+						<label for="Message">Message: </label><textarea name="Message"></textarea>
 					</p>
 					<p className="submit"><button type="submit">Send</button></p>
 				</form>
