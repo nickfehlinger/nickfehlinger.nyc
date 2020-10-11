@@ -1,0 +1,23 @@
+.footer{
+	display: flex;
+	border-top: 1px solid #666;
+	width: 90%;
+	margin: 0px auto;
+}
+.footerHalf{
+	flex: 1;
+	text-align: center;
+	vertical-align: bottom;
+}
+.socialLinks{
+	list-style: none;
+}
+.footer a{
+	color: #666;
+}
+.footer a:visited{
+	color: #666;
+}
+.footer a:hover{
+	color: #fb3;
+}
