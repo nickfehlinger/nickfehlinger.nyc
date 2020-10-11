@@ -6,7 +6,7 @@ export default function Container(props){
     return <div className={containerStyles.container}>
             <h3>{props.pageName}</h3>
             {props.heroImage ? (
-                <div className={containerStyles.heroImg} style={{backgroundImage:`url(${props.heroImage})`}}></div>
+                <div className={containerStyles.heroImg} style={{backgroundImage:`url(${props.heroImage})`}}><div className={containerStyles.hoverstate}></div></div>
             ) : null}
             <div dangerouslySetInnerHTML={{__html: props.pageDescription}}></div>
             {props.downloadable ? (

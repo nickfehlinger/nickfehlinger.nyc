@@ -1,12 +1,21 @@
 .container{
     margin: 0px auto;
-    padding: 0px 0px 0px 30px;
+    padding: 30px;
     text-align: center;
 }
 .heroImg{
     height: 350px;
     background-size: cover;
     background-position: center;
+}
+.hoverstate{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0);
+    transition-duration: 1000ms;
+}
+.heroImg:hover .hoverstate{
+    background-color: rgba(255,187,51,0.3);
 }
 img{
     max-width: 100%;
