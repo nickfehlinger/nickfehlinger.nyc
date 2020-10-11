@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const Testimonials = props => (
 	<li className={testimonialStyles.testimonial}>
-		<p dangerouslySetInnerHTML={{__html: props.testimonial}}></p>
-		<p>- {props.attribution}</p>
+		<div dangerouslySetInnerHTML={{__html: props.testimonial}}></div>
+		<p className={testimonialStyles.attribution}>- {props.attribution}</p>
 	</li>
 )
 

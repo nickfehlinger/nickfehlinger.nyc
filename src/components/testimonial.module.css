@@ -1,0 +1,18 @@
+.testimonialList{
+	width: 100%;
+	list-style: none;
+	padding: 0px;
+}
+.testimonial{
+	width: 70%;
+	padding: 10px 30px;
+	border: 1px solid #666;
+	border-radius: 5px;
+	margin: 15px auto;
+}
+.testimonial p{
+	margin: 5px auto;
+}
+.attribution{
+	text-align: right;
+}
