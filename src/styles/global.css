@@ -4,21 +4,25 @@ html{
     font-family: 'Red Hat Text';
     color: #333;
 }
-
+html, body {
+    margin: 0px;
+}
 h1, h2, h3, h4{
     font-family: 'Red Hat Display';
     color: #666;
+    margin: 0px;
 }
 a{
-    color: #666;
+    color: #fb3;
     text-decoration: none;
 }
 a:visited{
-    color: #666;
+    color: #fb3;
     text-decoration: none;
 }
 a:hover{
-    color: #333;
+    color: #fb3;
+    text-decoration: underline;
 }
 button{
     background-color: #fff;

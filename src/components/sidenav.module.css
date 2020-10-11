@@ -11,14 +11,15 @@
     background-color: #fff;
     cursor: pointer;
 }
-.navItem:hover{
-    background-color: #666;
-}
 .navItem a{
     color: #666;
 }
+.navItem:hover{
+    background-color: #fb5;
+}
 .navItem:hover a{
     color: #fff;
+    text-decoration: none;
 }
 .navLink{
     width: 100%;
