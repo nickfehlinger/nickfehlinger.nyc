@@ -3,7 +3,6 @@ import containerStyles from "./container.module.css"
 import Testimonial from './testimonial'
 
 export default function Container(props){
-    console.log(props)
     return <div className={containerStyles.container}>
             <h3>{props.pageName}</h3>
             {props.heroImage ? (

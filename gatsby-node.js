@@ -27,9 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `)
-    console.log(result)
     result.data.allKontentItemPage.edges.forEach(({node}) => {
-        console.log(node.fields.slug)
         createPage({
             path: node.fields.slug,
             component: path.resolve(`src/templates/page.js`),
@@ -37,6 +35,5 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.fields.slug
             }
         })
-        console.log(createPage)
     });
 }
