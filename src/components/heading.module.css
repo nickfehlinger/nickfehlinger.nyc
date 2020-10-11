@@ -4,3 +4,13 @@
     border-bottom: 1px solid #666;
     text-align: center;
 }
+.heading a{
+    color: #666;
+}
+.heading a:visited{
+    color: #666;
+}
+.heading a:hover{
+    color: #666;
+    text-decoration: none;
+}
