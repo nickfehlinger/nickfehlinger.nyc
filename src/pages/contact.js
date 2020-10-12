@@ -18,7 +18,7 @@ export default function Contact (){
 						<label for="Email">Email: </label><input type="Email" name="Email" required/>
 					</p>
 					<p>
-						<label for="Reason[]">Reason For Contact: </label><select name="Reason[]" required>
+						<label for="Reason">Reason For Contact: </label><select name="Reason" required>
 							<option disabled selected>Choose One</option>
 							<option value="Hire-FT">Hiring (Full Time)</option>
 							<option value="Hire-Freelance">Hiring (Freelance)</option>
