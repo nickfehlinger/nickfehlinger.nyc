@@ -9,8 +9,8 @@ export default function Contact (){
 				<p>Feel free to drop me a line! I can't wait to hear from you!</p>
 			</div>
 			<div className="contact">
-				<form name="contact2" method="POST" data-netlify="true" action="/thankyou">
-					<input type="hidden" name="form-name" value="contact2" />
+				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
+					<input type="hidden" name="form-name" value="contact" />
 					<p>
 						<label for="Name">Name: </label><input type="text" name="Name" required />
 					</p>
