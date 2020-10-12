@@ -18,13 +18,7 @@ export default function Contact (){
 						<label for="Email">Email: </label><input type="Email" name="Email" required/>
 					</p>
 					<p>
-						<label for="Reason">Reason For Contact: </label><select name="Reason" required>
-							<option disabled selected>Choose One</option>
-							<option value="Hire-FT">Hiring (Full Time)</option>
-							<option value="Hire-Freelance">Hiring (Freelance)</option>
-							<option value="General">General Inquiry</option>
-							<option value="Other">Other</option>
-						</select>
+						<label for="Subject">Subject: </label><input type="text" name="Subject" required/>
 					</p>
 					<p>
 						<label for="Message">Message: </label><textarea name="Message" required></textarea>
