@@ -41,6 +41,7 @@ export default function SideNav(){
 
     console.log(window.innerWidth)
     let sideNavDisplay = window.innerWidth < 480 ? "none" : "block"
+    console.log(sideNavDisplay)
 
     window.addEventListener('resize', function(){
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
