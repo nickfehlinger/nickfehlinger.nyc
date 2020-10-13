@@ -31,4 +31,7 @@ img{
     .heroImg{
         height: 250px;
     }
+    .heroImg:hover .hoverstate{
+        background-color: rgba(0,0,0,0);
+    }
 }
