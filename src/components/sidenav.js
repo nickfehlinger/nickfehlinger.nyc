@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import sidenavStyles from "./sidenav.module.css"
+import { window, document, exists } from 'browser-monads';
 
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
@@ -31,7 +32,6 @@ export default function SideNav(){
           
         `
     )
-    const module = typeof window !== `undefined` ? require("module") : null
     
     let navValues = data.allKontentItemPage.edges
 
