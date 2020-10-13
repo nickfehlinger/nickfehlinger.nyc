@@ -37,9 +37,7 @@ export default function SideNav(){
 
     window.addEventListener('resize', function(){
       sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
-      console.log(sideNavDisplay);
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
-      console.log("resized");
     })
     
     return (
