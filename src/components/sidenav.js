@@ -10,6 +10,11 @@ const NavLink = props => (
     </li>
 )
 
+let setMenu = function(){
+  sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+  document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
+}
+
 export default function SideNav(){
     let data = useStaticQuery(
         graphql`
@@ -36,14 +41,8 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-    window.addEventListener('load', function(){
-      sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
-      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
-  })
-    window.addEventListener('resize', function(){
-      sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
-      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
-  })
+    window.addEventListener('load', setMenu())
+    window.addEventListener('resize', set())
     return (
       <ul className={sidenavStyles.navList} id="sideNav">
             {navValues.map((navLink) => {
