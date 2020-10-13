@@ -6,7 +6,7 @@ import { window, document, exists } from 'browser-monads';
 window.location.href;
 
 console.log(exists(window));
-let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+let sideNavDisplay = window.innerWidth > 480 ? "none" : "block";
 
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
