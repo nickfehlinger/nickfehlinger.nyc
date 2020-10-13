@@ -49,7 +49,7 @@ export default function SideNav(){
     })
     console.log(sideNavDisplay)
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: sideNavDisplay}}>
         {console.log(sideNavDisplay)}
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
