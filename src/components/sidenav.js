@@ -31,6 +31,8 @@ export default function SideNav(){
           
         `
     )
+    const module = typeof window !== `undefined` ? require("module") : null
+    
     let navValues = data.allKontentItemPage.edges
 
     let sideNavDisplay = window.innerWidth > 480 ? "block" : "none"
@@ -39,7 +41,6 @@ export default function SideNav(){
       sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
-    
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
             {navValues.map((navLink) => {
