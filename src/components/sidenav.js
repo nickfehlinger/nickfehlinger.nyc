@@ -6,6 +6,7 @@ import { window, document, exists } from 'browser-monads';
 window.location.href;
 
 console.log(exists(window));
+let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
 
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
@@ -39,7 +40,7 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-    let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+
     console.log(window.innerWidth)
     console.log(sideNavDisplay)
 
@@ -50,7 +51,6 @@ export default function SideNav(){
     console.log(sideNavDisplay)
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: sideNavDisplay}}>
-        {document.getElementById("sideNav").style.display = sideNavDisplay}
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
