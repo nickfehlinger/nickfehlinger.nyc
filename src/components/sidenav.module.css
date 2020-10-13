@@ -35,9 +35,6 @@
         background-color: #fff;
         border: none;
     }
-    ul#sideNav.open{
-        display: block;
-    }
     .navItem{
         width: 100%;
         display: block;
