@@ -41,12 +41,12 @@ export default function SideNav(){
 
     console.log(window.innerWidth)
     let sideNavDisplay = window.innerWidth < 480 ? "none" : "block"
-    document.getElementById("sideNav").style.display = sideNavDisplay
+    document.getElementById("sideNav").style.display = `${sideNavDisplay}`
     console.log(sideNavDisplay)
 
     window.addEventListener('resize', function(){
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
-      document.getElementById("sideNav").style.display = sideNavDisplay;
+      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
