@@ -4,7 +4,7 @@ import Heading from "./heading";
 import SideNav from "./sidenav";
 import Footer from "./footer";
 
-
+const module = typeof window !== `undefined` ? require("module") : null
 
 export default function Layout({children}){
 
