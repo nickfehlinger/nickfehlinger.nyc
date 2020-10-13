@@ -50,7 +50,7 @@ export default function SideNav(){
     console.log(sideNavDisplay)
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: sideNavDisplay}}>
-        {console.log(sideNavDisplay)}
+        {document.getElementById("sideNav").style.display = sideNavDisplay}
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
