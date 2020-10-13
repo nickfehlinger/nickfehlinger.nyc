@@ -4,9 +4,6 @@ import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
 
 window.location.href;
-
-let sideNavDisplay = window.innerWidth > 480 ? "none" : "block";
-
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
@@ -39,24 +36,16 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-
-    console.log(window.innerWidth)
-    console.log(sideNavDisplay)
-
     window.addEventListener('load', function(){
-      console.log("this is happening")
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
   })
     window.addEventListener('resize', function(){
-      console.log("this is happening")
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
   })
-    console.log(sideNavDisplay)
     return (
       <ul className={sidenavStyles.navList} id="sideNav">
-        {console.log(sideNavDisplay)}
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
