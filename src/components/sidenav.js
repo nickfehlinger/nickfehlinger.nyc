@@ -32,9 +32,11 @@ export default function SideNav(){
         `
     )
     let navValues = data.allKontentItemPage.edges
+
+    let sideNavDisplay = window.innerWidth > 480 ? "block" : "none"
     
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display:`none`}}>
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
