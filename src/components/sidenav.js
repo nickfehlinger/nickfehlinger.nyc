@@ -47,6 +47,7 @@ export default function SideNav(){
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
+    console.log(sideNavDisplay)
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
             {navValues.map((navLink) => {
