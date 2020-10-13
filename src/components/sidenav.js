@@ -39,17 +39,15 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-    let setMenu = function(){
-      let sideNav = document.getElementById("sideNav"),
-          sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
-          sideNav.style.display = sideNavDisplay
-          console.log(sideNav.style.display, sideNavDisplay)
-    }
-    setMenu()
-    window.addEventListener('resize', setMenu())
+    let sideNavDisplay = window.innerWidth < 480 ? "none" : "block"
+    console.log(window.innerWidth)
 
+    window.addEventListener('resize', function(){
+      sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
+    })
     return (
-      <ul className={sidenavStyles.navList} id="sideNav">
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
@@ -59,4 +57,5 @@ export default function SideNav(){
             <NavLink to="/contact">Contact</NavLink>
         </ul>
     )
+
 }
