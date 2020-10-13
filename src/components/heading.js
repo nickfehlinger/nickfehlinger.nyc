@@ -26,6 +26,7 @@ export default function Heading() {
     let headingData = data.allKontentItemHeading.edges[0].node.elements;
     let toggleMenu = function(){
         let menu = document.getElementById("sideNav")
+        console.log("this is happening")
         menu.style.display = menu.style.display === "none" ? "block" : "none"
     }
     return(
