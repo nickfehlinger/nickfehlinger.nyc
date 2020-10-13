@@ -45,10 +45,10 @@ export default function SideNav(){
           console.log(sideNav, sideNavDisplay)
     }
     setMenu()
+    window.addEventListener('resize', setMenu())
 
     return (
       <ul className={sidenavStyles.navList} id="sideNav">
-        {console.log(sideNavDisplay, document.getElementById("sideNav").style.display) }
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
