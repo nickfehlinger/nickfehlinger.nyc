@@ -38,7 +38,7 @@ export default function SideNav(){
     let sideNavDisplay = window.innerWidth > 480 ? "block" : "none"
 
     window.addEventListener('resize', function(){
-      sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
+      sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
     return (
