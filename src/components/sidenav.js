@@ -34,7 +34,7 @@ export default function SideNav(){
     let navValues = data.allKontentItemPage.edges
 
     return (
-        <ul className={sidenavStyles.navList}>
+        <ul className={sidenavStyles.navList} id="sideNav">
             {navValues.map((navLink) => {
                 let link = `/${navLink.node.fields.slug}`,
                     value = navLink.node.elements.page_name.value;

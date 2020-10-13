@@ -24,12 +24,20 @@ export default function Heading() {
     `
     )
     let headingData = data.allKontentItemHeading.edges[0].node.elements;
+
     return(
         <div className={headingStyles.heading}>
             <Link to='/'>
                 <h1>{headingData.title.value}</h1>
                 <h2>{headingData.subtitle.value}</h2>
             </Link>
+            <div className={headingStyles.hamburger} onClick={menu.style.display = "none" ? "block" : "none"}>
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                </svg>
+            </div>
         </div>
     )
 }

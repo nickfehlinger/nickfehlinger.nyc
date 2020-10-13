@@ -25,3 +25,23 @@
     width: 100%;
     display: block;
 }
+
+@media screen and (max-width:480px){
+    .navList{
+        position: absolute;
+        width: calc(100% - 40px);
+        padding: 0px;
+        margin: 0px;
+        background-color: #fff;
+        border: none;
+        display: none;
+    }
+    ul#sideNav.open{
+        display: block;
+    }
+    .navItem{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+}

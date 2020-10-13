@@ -16,3 +16,10 @@
 .attribution{
 	text-align: right;
 }
+
+@media screen and (max-width: 480px){
+	.testimonial{
+		padding: 10px;
+		width: unset;
+	}
+}

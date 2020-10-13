@@ -62,3 +62,19 @@ button:hover{
 .contact .submit{
     text-align: right;
 }
+
+@media screen and (max-width:480px){
+    .contact{
+        width: 100%;
+    }
+    .contact p{
+        width: 100%;
+    }
+    .contact input, .contact select, .contact textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contact label{
+        display: block;
+    }
+}

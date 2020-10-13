@@ -11,6 +11,7 @@
 }
 .socialLinks{
 	list-style: none;
+	padding: 0px;
 }
 .footer a{
 	color: #666;
@@ -20,4 +21,10 @@
 }
 .footer a:hover{
 	color: #fb3;
+}
+
+@media screen and (max-width:480px){
+	.footer{
+		font-size: 10px;
+	}
 }

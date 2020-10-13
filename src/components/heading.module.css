@@ -14,3 +14,27 @@
     color: #666;
     text-decoration: none;
 }
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width:480px){
+    .heading{
+        text-align: left;
+        width: 100%;
+        display: flex;
+    }
+    .heading a{
+        width: 85%;
+    }
+    .heading h2{
+        font-size: 1em;
+    }
+    .hamburger{
+        display: block;
+        margin: 10px auto;
+        fill: #666;
+        width: 15%;
+        text-align: center;
+    }
+}
