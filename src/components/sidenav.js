@@ -34,6 +34,13 @@ export default function SideNav(){
     let navValues = data.allKontentItemPage.edges
 
     let sideNavDisplay = window.innerWidth > 480 ? "block" : "none"
+
+    window.addEventListener('resize', function(){
+      sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
+      console.log(sideNavDisplay);
+      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
+      console.log("resized");
+    })
     
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
