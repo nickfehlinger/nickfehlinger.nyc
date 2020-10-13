@@ -5,7 +5,7 @@ import { window, document, exists } from 'browser-monads';
 
 window.location.href;
 
-exists(window);
+console.log(exists(window));
 
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
