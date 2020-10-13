@@ -42,7 +42,7 @@ export default function SideNav(){
     let navValues = data.allKontentItemPage.edges
 
     window.addEventListener('load', setMenu())
-    window.addEventListener('resize', set())
+    window.addEventListener('resize', setMenu())
     return (
       <ul className={sidenavStyles.navList} id="sideNav">
             {navValues.map((navLink) => {
