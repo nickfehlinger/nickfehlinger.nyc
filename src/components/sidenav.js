@@ -36,7 +36,7 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-    window.addEventListener('load', function(){
+    document.addEventListener('load', function(){
       console.log("load")
       let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
