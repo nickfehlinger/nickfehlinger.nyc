@@ -40,6 +40,7 @@ export default function SideNav(){
     let navValues = data.allKontentItemPage.edges
 
     let sideNavDisplay = window.innerWidth < 480 ? "none" : "block"
+    console.log(window.innerWidth)
 
     window.addEventListener('resize', function(){
       sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
