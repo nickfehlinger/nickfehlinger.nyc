@@ -45,7 +45,6 @@ export default function SideNav(){
           console.log(sideNav, sideNavDisplay)
     }
     setMenu()
-    addEventListener('resize', setMenu())
 
     return (
       <ul className={sidenavStyles.navList} id="sideNav">
