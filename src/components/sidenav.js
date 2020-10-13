@@ -11,7 +11,7 @@ const NavLink = props => (
 )
 
 let setMenu = function(){
-  sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+  let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
   document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
 }
 
