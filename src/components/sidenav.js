@@ -32,14 +32,14 @@ export default function SideNav(){
         `
     )
     let navValues = data.allKontentItemPage.edges
-
+    
     return (
-        <ul className={sidenavStyles.navList} id="sideNav">
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display:`none`}}>
             {navValues.map((navLink) => {
-                let link = `/${navLink.node.fields.slug}`,
-                    value = navLink.node.elements.page_name.value;
-
-                return <NavLink to={link}>{value}</NavLink>
+              let link = `/${navLink.node.fields.slug}`,
+              value = navLink.node.elements.page_name.value;
+              
+              return <NavLink to={link}>{value}</NavLink>
             })}
             <NavLink to="/contact">Contact</NavLink>
         </ul>

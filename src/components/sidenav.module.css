@@ -34,7 +34,6 @@
         margin: 0px;
         background-color: #fff;
         border: none;
-        display: none;
     }
     ul#sideNav.open{
         display: block;
