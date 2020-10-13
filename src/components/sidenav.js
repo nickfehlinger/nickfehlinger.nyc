@@ -39,17 +39,17 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
-    console.log(window.innerWidth)
-    let sideNavDisplay = window.innerWidth < 480 ? "none" : "block"
-    document.getElementById("sideNav").style.display = `${sideNavDisplay}`
-    console.log(sideNavDisplay)
+    let setMenu = function(){
+      let sideNav = document.getElementById("sideNav"),
+          sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
 
-    window.addEventListener('resize', function(){
-      sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
-      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
-    })
+      sideNav.style.display = sideNavDisplay
+    }
+    setMenu()
+    addEventListener('resize', setMenu())
+
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${sideNavDisplay}`}}>
+      <ul className={sidenavStyles.navList} id="sideNav">
         {console.log(sideNavDisplay, document.getElementById("sideNav").style.display) }
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
