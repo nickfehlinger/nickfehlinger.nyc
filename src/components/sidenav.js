@@ -51,7 +51,8 @@ export default function SideNav(){
     })
     console.log(sideNavDisplay)
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `${window.innerWidth < 480 ? "none" : "block"}`, backgroundColor: `red`}}>
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: sideNavDisplay}}>
+        {console.log(sideNavDisplay)}
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
