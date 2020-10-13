@@ -42,8 +42,7 @@ export default function SideNav(){
     let setMenu = function(){
       let sideNav = document.getElementById("sideNav"),
           sideNavDisplay = window.innerWidth > 480 ? "block" : "none";
-
-      sideNav.style.display = sideNavDisplay
+          console.log(sideNav, sideNavDisplay)
     }
     setMenu()
     addEventListener('resize', setMenu())
