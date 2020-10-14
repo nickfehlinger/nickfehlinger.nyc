@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
-import toggleMenu from "./heading"
+import onClientEntry from "../../gatsby-browser"
 
 let hideNav = function(){
   if(window.innerWidth < 480){
@@ -15,6 +15,8 @@ const NavLink = props => (
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
     </li>
 )
+
+onClientEntry()
 
 export default function SideNav(){
     let data = useStaticQuery(
