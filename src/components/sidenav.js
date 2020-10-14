@@ -4,8 +4,14 @@ import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
 import toggleMenu from "./heading"
 
+let hideNav = function(){
+  if(window.innerWidth < 480){
+    this.parentElement.style.display = "none"
+  }
+}
+
 const NavLink = props => (
-    <li className={sidenavStyles.navItem} onClick={toggleMenu}>
+    <li className={sidenavStyles.navItem} onClick={hideNav}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
     </li>
 )

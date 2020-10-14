@@ -2,14 +2,6 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import headingStyles from "./heading.module.css"
 
-export  const toggleMenu = function(){
-    if (window.innerWidth < 480){
-        let menu = document.getElementById("sideNav")
-        console.log("this is happening")
-        menu.style.display = menu.style.display === "none" ? "block" : "none"
-    }
-}
-
 export default function Heading() {
     let data = useStaticQuery(
     graphql`
@@ -32,7 +24,11 @@ export default function Heading() {
     `
     )
     let headingData = data.allKontentItemHeading.edges[0].node.elements;
-
+    let toggleMenu = function(){
+        let menu = document.getElementById("sideNav")
+        console.log("this is happening")
+        menu.style.display = menu.style.display === "none" ? "block" : "none"
+    }
     return(
         <div className={headingStyles.heading}>
             <Link to='/'>
