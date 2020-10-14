@@ -35,7 +35,7 @@ export default function Heading() {
                 <h1>{headingData.title.value}</h1>
                 <h2>{headingData.subtitle.value}</h2>
             </Link>
-            <div className={headingStyles.hamburger} onClick={toggleMenu}>
+            <div className={headingStyles.hamburger}>
                 <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect width="100" height="20"></rect>
                     <rect y="30" width="100" height="20"></rect>
