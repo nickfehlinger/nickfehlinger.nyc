@@ -3,9 +3,11 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import headingStyles from "./heading.module.css"
 
 export  const toggleMenu = function(){
-    let menu = document.getElementById("sideNav")
-    console.log("this is happening")
-    menu.style.display = menu.style.display === "none" ? "block" : "none"
+    if (window.innerWidth < 480){
+        let menu = document.getElementById("sideNav")
+        console.log("this is happening")
+        menu.style.display = menu.style.display === "none" ? "block" : "none"
+    }
 }
 
 export default function Heading() {
