@@ -2,9 +2,10 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
+import toggleMenu from "./heading"
 
 const NavLink = props => (
-    <li className={sidenavStyles.navItem}>
+    <li className={sidenavStyles.navItem} onClick={toggleMenu}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
     </li>
 )
