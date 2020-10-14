@@ -5,7 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 const Testimonials = props => (
 	<li className={testimonialStyles.testimonial}>
 		<div dangerouslySetInnerHTML={{__html: props.testimonial}}></div>
-		<p className={testimonialStyles.attribution}>- {props.attribution}</p>
+		<div className={testimonialStyles.attribution}>
+			<p className={testimonialStyles.attributionName}>- {props.attributionName}</p>
+			<p className={testimonialStyles.attributionTitle}>{props.attributionTitle}</p>
+		</div>
 	</li>
 )
 
@@ -22,6 +25,9 @@ export default function Testimonial () {
 			  testimonial {
 				value
 			  }
+			  title {
+				  value
+			  }
 			}
 		  }
 		}
@@ -37,7 +43,7 @@ export default function Testimonial () {
 		<ul className={testimonialStyles.testimonialList}>
 			{testimonials.map((testimonial) => {
 				return (
-				<Testimonials testimonial={testimonial.elements.testimonial.value} attribution={testimonial.elements.attribution.value}></Testimonials>
+				<Testimonials testimonial={testimonial.elements.testimonial.value} attributionName={testimonial.elements.attribution.value} attributionTitle={testimonial.elements.title.value}></Testimonials>
 				)
 			})}
 		</ul>
