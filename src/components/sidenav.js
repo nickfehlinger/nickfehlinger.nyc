@@ -16,9 +16,9 @@ const NavLink = props => (
     </li>
 )
 
-onClientEntry()
 
 export default function SideNav(){
+  onClientEntry()
     let data = useStaticQuery(
         graphql`
         {
