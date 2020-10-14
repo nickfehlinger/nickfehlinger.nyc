@@ -11,7 +11,7 @@ let hideNav = function(){
 }
 
 const NavLink = props => (
-    <li className={sidenavStyles.navItem} onClick={hideNav}>
+    <li className={sidenavStyles.navItem} onClick={console.log(this)}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
     </li>
 )
