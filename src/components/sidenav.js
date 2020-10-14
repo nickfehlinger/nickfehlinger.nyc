@@ -3,7 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
 
-window.location.href;
 const NavLink = props => (
     <li className={sidenavStyles.navItem}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
