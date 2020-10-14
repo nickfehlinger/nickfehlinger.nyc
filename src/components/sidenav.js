@@ -2,7 +2,6 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import sidenavStyles from "./sidenav.module.css"
 import { window, document, exists } from 'browser-monads';
-import onClientEntry from "../../gatsby-browser"
 
 let hideNav = function(){
   if(window.innerWidth < 480){
@@ -16,9 +15,7 @@ const NavLink = props => (
     </li>
 )
 
-
 export default function SideNav(){
-  onClientEntry()
     let data = useStaticQuery(
         graphql`
         {
