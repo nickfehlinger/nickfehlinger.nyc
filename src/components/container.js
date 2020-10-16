@@ -1,6 +1,7 @@
 import React from "react"
 import containerStyles from "./container.module.css"
 import Testimonial from './testimonial'
+import { InlineWidget } from "react-calendly"
 
 export default function Container(props){
     return <div className={containerStyles.container}>
@@ -17,5 +18,12 @@ export default function Container(props){
             {props.slug === 'testimonials' ? (
                 <Testimonial></Testimonial>
             ) : null}
+            {props.slug === 'freelance' ? (
+                <InlineWidget
+                url= "https://calendly.com/nickfehlinger"
+                backgroundColor="ffffff"
+                textColor="333333"
+                ></InlineWidget>
+            )}
            </div>
 }
