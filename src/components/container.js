@@ -24,6 +24,6 @@ export default function Container(props){
                 backgroundColor="ffffff"
                 textColor="333333"
                 ></InlineWidget>
-            )}
+            ) : null}
            </div>
 }
