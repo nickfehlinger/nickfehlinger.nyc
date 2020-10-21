@@ -1,13 +1,12 @@
 import React from "react"
+import Container from "../components/container"
 import Layout from "../components/layout"
 
 export default function Contact (){
 	return (
 		<Layout>
-			<div className="contactTitle">
-				<h3>Contact</h3>
-				<p>Feel free to drop me a line! I can't wait to hear from you!</p>
-			</div>
+			<Container pageName='Contact' pageDescription="<p>Feel free to drop me a line! I can't wait to hear from you!</p>" slug='contact'></Container>
+
 			<div className="contact">
 				<form name="contact" method="POST" data-netlify="true" action="/thankyou">
 					<input type="hidden" name="form-name" value="contact" />
