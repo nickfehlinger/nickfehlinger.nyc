@@ -46,8 +46,6 @@ export default function SideNav(){
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
 
-    window.innerWidth < 480 ? 'none' : 'block'
-
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `none`}}>
             <NavLink to="/">Home</NavLink>
