@@ -6,3 +6,10 @@ export const onClientEntry = () => {
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
 	}
   }
+
+  export const onRouteUpdate = () => {
+	window.onload = () => { 
+      let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+      document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
+	}
+  }
