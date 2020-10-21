@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly"
 
 export default function Container(props){
     return <div className={containerStyles.container}>
-            <h3>{props.pageName}</h3>
+            <h3>{props.pageName ? props.pageName : null}</h3>
             {props.heroImage ? (
                 <div className={containerStyles.heroImg} style={{backgroundImage:`url(${props.heroImage})`}}><div className={containerStyles.hoverstate}></div></div>
             ) : null}
