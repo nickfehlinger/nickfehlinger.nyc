@@ -48,6 +48,7 @@ export default function SideNav(){
     })
     return (
       <ul className={sidenavStyles.navList} id="sideNav" style={{display: `none`}}>
+            <NavLink to="/">Home</NavLink>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
