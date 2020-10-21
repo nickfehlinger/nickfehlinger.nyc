@@ -39,7 +39,7 @@ button:hover{
     text-align: center;
 }
 .contact{
-    margin: 30px auto;
+    margin: 0px auto 30px;
     display: block;
     width: 650px;
 }
