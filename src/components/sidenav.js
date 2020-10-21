@@ -10,7 +10,7 @@ let hideNav = function(){
 }
 
 const NavLink = props => (
-    <li className={sidenavStyles.navItem} onClick={hideNav} style={{display: `none`}}>
+    <li className={sidenavStyles.navItem} onClick={hideNav}>
         <Link to={props.to} className={sidenavStyles.navLink}>{props.children}</Link>
     </li>
 )
@@ -47,7 +47,7 @@ export default function SideNav(){
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
     return (
-      <ul className={sidenavStyles.navList} id="sideNav">
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `none`}}>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
               value = navLink.node.elements.page_name.value;
