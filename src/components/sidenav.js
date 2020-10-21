@@ -47,7 +47,7 @@ export default function SideNav(){
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display: `none`}}>
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: window.innerWidth < 480 ? `none` : `block`}}>
             <NavLink to="/">Home</NavLink>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
