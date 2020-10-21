@@ -41,13 +41,15 @@ export default function SideNav(){
     
     let navValues = data.allKontentItemPage.edges
 
+    let displayValue = window.innerWidth < 480 ? 'none' : 'block'
+
     window.addEventListener('resize', function(){
       console.log("resize")
-      let sideNavDisplay = window.innerWidth < 480 ? "none" : "block";
+      let sideNavDisplay = displayValue
       document.getElementById("sideNav").style.display = `${sideNavDisplay}`;
     })
     return (
-      <ul className={sidenavStyles.navList} id="sideNav" style={{display: window.innerWidth < 480 ? 'none' : 'block'}}>
+      <ul className={sidenavStyles.navList} id="sideNav" style={{display: displayValue}}>
             <NavLink to="/">Home</NavLink>
             {navValues.map((navLink) => {
               let link = `/${navLink.node.fields.slug}`,
