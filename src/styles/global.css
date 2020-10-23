@@ -63,7 +63,7 @@ button:hover{
     text-align: right;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:960px){
     .contact{
         width: 100%;
     }
